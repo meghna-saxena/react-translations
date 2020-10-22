@@ -10,16 +10,12 @@ function App() {
   const { t, i18n } = useTranslation();
 
   const switchLanguage = (lang: string) => {
-    if (lang === LANGUAGES[0]) {
-      i18n.changeLanguage(lang);
-    } else {
-      i18n.changeLanguage(lang);
-    }
+    i18n.changeLanguage(lang);
   };
 
   return (
     <div>
-      <header style={{ height: 70, backgroundColor: "aquamarine" }}>
+      <header style={{ height: 70, backgroundColor: "#577d67" }}>
         <nav
           style={{ display: "flex", justifyContent: "flex-end", padding: 5 }}
         >
@@ -34,8 +30,9 @@ function App() {
       <main
         style={{
           display: "flex",
-          justifyContent: "center",
-          fontSize: 20,
+          justifyContent: "left",
+          marginLeft: 40,
+          fontSize: 28,
           fontWeight: 200,
         }}
       >
