@@ -4,12 +4,18 @@ import { initReactI18next } from "react-i18next";
 const resources = {
   en: {
     translation: {
-      "translated-paragraph": "How are you Raj?",
+      "how-are-you": "How are you Raj?",
+      "when-will-we-go-out": "When will we go out?",
+      "let-us-watch-something": "Let's watch something",
+      "i-love-you": "I love you!",
     },
   },
   de: {
     translation: {
-      "translated-paragraph": "Wie geht's Raj?",
+      "how-are-you": "Wie geht es dir, Raj?",
+      "when-will-we-go-out": "Wann gehen wir aus?",
+      "let-us-watch-something": "Lassen Sie uns etwas ansehen",
+      "i-love-you": "Ich liebe dich!",
     },
   },
 };

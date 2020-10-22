@@ -18,18 +18,34 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <div>
-          <IconButton onClick={() => switchLanguage(LANGUAGES[0])}>
-            <IconFlagUK />
-          </IconButton>
+    <div>
+      <header style={{ height: 70, backgroundColor: "aquamarine" }}>
+        <nav
+          style={{ display: "flex", justifyContent: "flex-end", padding: 5 }}
+        >
           <IconButton onClick={() => switchLanguage(LANGUAGES[1])}>
             <IconFlagDE />
           </IconButton>
-        </div>
-        <p>{t("translated-paragraph")}</p>
+          <IconButton onClick={() => switchLanguage(LANGUAGES[0])}>
+            <IconFlagUK />
+          </IconButton>
+        </nav>
       </header>
+      <main
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          fontSize: 20,
+          fontWeight: 200,
+        }}
+      >
+        <section>
+          <p>{t("how-are-you")}</p>
+          <p>{t("when-will-we-go-out")}</p>
+          <p>{t("let-us-watch-something")}</p>
+          <p>{t("i-love-you")}</p>
+        </section>
+      </main>
     </div>
   );
 }
