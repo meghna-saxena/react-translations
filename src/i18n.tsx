@@ -1,25 +1,23 @@
-import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
 
 const resources = {
   en: {
     translation: {
-      "translated-paragraph": "We are going to translate this paragraph - how will it be in Polish?"
-    }
+      "translated-paragraph": "How are you Raj?",
+    },
   },
-  pl: {
+  de: {
     translation: {
-      "translated-paragraph": "Przetlumaczymy ten paragraf - jak to bedzie po Polsku?"
-    }
-  }
+      "translated-paragraph": "Wie geht's Raj?",
+    },
+  },
 };
 
-i18n
-  .use(initReactI18next)
-  .init({
-    resources,
-    lng: 'pl',
-    fallbackLng: 'en'
-  });
+i18n.use(initReactI18next).init({
+  resources,
+  lng: "de",
+  fallbackLng: "en",
+});
 
 export default i18n;

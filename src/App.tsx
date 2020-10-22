@@ -4,31 +4,30 @@ import IconButton from "@material-ui/core/IconButton";
 import { IconFlagDE, IconFlagUK } from "material-ui-flags";
 import "./App.css";
 
-const LANGUAGES = ["en", "pl"];
+const LANGUAGES = ["en", "de"];
 
 function App() {
-  const [lang, setLang] = React.useState(LANGUAGES[0]);
-  const [defaultflag, setDefaultFlag] = React.useState(false);
   const { t, i18n } = useTranslation();
 
-  const switchLanguage = () => {
+  const switchLanguage = (lang: string) => {
     if (lang === LANGUAGES[0]) {
-      setLang(LANGUAGES[1]);
-      setDefaultFlag(!defaultflag);
-      i18n.changeLanguage(LANGUAGES[1]);
+      i18n.changeLanguage(lang);
     } else {
-      setLang(LANGUAGES[0]);
-      setDefaultFlag(!defaultflag);
-      i18n.changeLanguage(LANGUAGES[0]);
+      i18n.changeLanguage(lang);
     }
   };
 
   return (
     <div className="App">
       <header className="App-header">
-        <IconButton onClick={switchLanguage}>
-          {defaultflag ? <IconFlagUK /> : <IconFlagDE />}
-        </IconButton>
+        <div>
+          <IconButton onClick={() => switchLanguage(LANGUAGES[0])}>
+            <IconFlagUK />
+          </IconButton>
+          <IconButton onClick={() => switchLanguage(LANGUAGES[1])}>
+            <IconFlagDE />
+          </IconButton>
+        </div>
         <p>{t("translated-paragraph")}</p>
       </header>
     </div>
